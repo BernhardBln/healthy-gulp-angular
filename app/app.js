@@ -1,4 +1,4 @@
-angular.module('healthyGulpAngularApp', ['ui.router', 'healthyGulpAngularAppComponents'])
+angular.module('healthyGulpAngularApp', ['ui.router', 'healthyGulpAngularAppComponents', 'toaster'])
 
 .config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
@@ -12,4 +12,9 @@ angular.module('healthyGulpAngularApp', ['ui.router', 'healthyGulpAngularAppComp
                 templateUrl: 'components/home.html'
             });
 
-    }]);
+    }])
+    .controller('myController', function($scope, toaster) {
+        $scope.pop = function() {
+            toaster.pop('success', "title", "text");
+        };
+    });

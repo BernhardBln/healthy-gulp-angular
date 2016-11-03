@@ -143,7 +143,8 @@ These tasks I use as part of my regular developments and deploy scripts:
 
 - __`gulp watch-dev`__ Clean, build, and watch live changes to the dev environment. Built sources are served directly by the dev server from /dist.dev.
 - __`gulp watch-prod`__ Clean, build, and watch live changes to the prod environment. Built sources are served directly by the dev server from /dist.prod.
-- __`gulp`__ Default task builds for prod. Built sources are put into /dist.prod, and can be served directly.
+- __`gulp build`__ Builds for prod. Built sources are put into /dist.prod, and can be served directly.
+- __`gulp`__ Default task - same as `gulp watch-dev`.
 
 ### Sub-tasks
 
